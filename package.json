@@ -1,0 +1,24 @@
+{
+  "name": "devcamp-shop24h-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/devcamp120.j2225/exercise/anhnt1/20220909-project-shop24h/devcamp-shop24h-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/devcamp120.j2225/exercise/anhnt1/20220909-project-shop24h/devcamp-shop24h-backend/issues"
+  },
+  "homepage": "https://gitlab.com/devcamp120.j2225/exercise/anhnt1/20220909-project-shop24h/devcamp-shop24h-backend#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.6.0"
+  }
+}
