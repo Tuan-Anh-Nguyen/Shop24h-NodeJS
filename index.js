@@ -50,7 +50,7 @@ app.use(function (req, res, next) {
 });
 
 // Sử dụng authMiddleware
-app.use('/', authMiddleware);
+app.use('/customers', authMiddleware);
 
 // Sử dụng routers
 app.use(productTypeRouter);
