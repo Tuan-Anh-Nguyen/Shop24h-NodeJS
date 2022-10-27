@@ -4,6 +4,9 @@ const express = require('express');
 // Import thư viện mongoose
 const mongoose = require('mongoose');
 
+// Import cors
+const cors = require("cors");
+
 // Kết nối mongoDB
 mongoose.connect('mongodb://localhost:27017/CRUD_Shop24h', function (error) {
      if (error) throw error;
@@ -23,6 +26,9 @@ const app = new express();
 // Tạo cổng chạy
 const port = 8000;
 
+// Import auth middleware
+const authMiddleware = require("./app/middleware/auth-middleware");
+
 // Sử dụng đc body json
 app.use(express.json());
 
@@ -30,6 +36,9 @@ app.use(express.json());
 app.use(express.urlencoded({
      extended: true
 }))
+
+// Sử dụng cors
+app.use(cors());
 
 // Tránh lỗi CORS
 app.use(function (req, res, next) {
@@ -39,6 +48,9 @@ app.use(function (req, res, next) {
      res.setHeader('Access-Control-Allow-Credentials', true);
      next();
 });
+
+// Sử dụng authMiddleware
+app.use('/', authMiddleware);
 
 // Sử dụng routers
 app.use(productTypeRouter);

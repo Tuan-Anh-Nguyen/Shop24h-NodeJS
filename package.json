@@ -18,7 +18,9 @@
   },
   "homepage": "https://gitlab.com/devcamp120.j2225/exercise/anhnt1/20220909-project-shop24h/devcamp-shop24h-backend#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
+    "firebase-admin": "^11.2.0",
     "mongoose": "^6.6.0"
   }
 }
